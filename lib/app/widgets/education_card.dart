@@ -18,7 +18,7 @@ class EducationCard extends StatelessWidget {
       children: [
         CustomInput(
           hintText: "Education",
-          controller: homeC.experienceDesignation,
+          controller: homeC.educationName,
           validation: null,
           border: OutlineInputBorder(),
           inputFontSize: 14,
@@ -28,7 +28,7 @@ class EducationCard extends StatelessWidget {
         ),
         CustomInput(
           hintText: "Board/University",
-          controller: homeC.experienceCompany,
+          controller: homeC.educationboard,
           inputFontSize: 14,
           validation: null,
           border: OutlineInputBorder(),
@@ -40,7 +40,7 @@ class EducationCard extends StatelessWidget {
           children: [
             Flexible(
               child: TextFormField(
-                controller: homeC.fromController,
+                controller: homeC.educationFromController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "From",
@@ -52,7 +52,7 @@ class EducationCard extends StatelessWidget {
                           firstDate: DateTime(
                               2000), //DateTime.now() - not to allow to choose before today.
                           lastDate: DateTime(2101));
-                      homeC.fromController.text =
+                      homeC.educationFromController.text =
                           "${pickedDate!.day}-${pickedDate.month}-${pickedDate.year}";
                     },
                     icon: Icon(Icons.calendar_month),
@@ -65,7 +65,7 @@ class EducationCard extends StatelessWidget {
             ),
             Flexible(
               child: TextFormField(
-                controller: homeC.toController,
+                controller: homeC.educationtoController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: "To",
@@ -77,7 +77,7 @@ class EducationCard extends StatelessWidget {
                           firstDate: DateTime(
                               2000), //DateTime.now() - not to allow to choose before today.
                           lastDate: DateTime(2101));
-                      homeC.toController.text =
+                      homeC.educationtoController.text =
                           "${pickedDate!.day}-${pickedDate.month}-${pickedDate.year}";
                     },
                     icon: Icon(Icons.calendar_month),

@@ -4,10 +4,9 @@ class HomeController extends GetxController {
   //TODO: Implement HomeController
 
   final count = 0.obs;
+  List ResumesList = [].obs;
   @override
-  void onInit() {
-    super.onInit();
-  }
+  void onInit() {}
 
   @override
   void onReady() {
