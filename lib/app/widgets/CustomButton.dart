@@ -9,6 +9,7 @@ class CustomButton extends StatelessWidget {
   final Color borderColor;
   final bool isBorder;
   final double textSize;
+  final double height;
   CustomButton({
     super.key,
     required this.text,
@@ -18,12 +19,13 @@ class CustomButton extends StatelessWidget {
     this.isBorder = false,
     this.borderColor = Colors.teal,
     this.textSize = 16,
+    this.height = 40,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
+      height: height,
       width: width,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
