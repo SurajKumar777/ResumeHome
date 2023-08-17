@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:resumehome/app/modules/resume_screen/controllers/resume_screen_controller.dart';
 import 'package:resumehome/app/routes/app_pages.dart';
 import 'package:resumehome/app/widgets/CustomButton.dart';
 import 'package:resumehome/app/widgets/custom_text.dart';
@@ -9,9 +8,7 @@ import 'package:resumehome/app/widgets/custom_text.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  HomeView({Key? key}) : super(key: key);
-
-  final resumeC = Get.find<ResumeScreenController>();
+  const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +22,7 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
       body: Obx(
-        () => resumeC.ResumesList.isEmpty
+        () => controller.ResumesList.isEmpty
             ? const Center(
                 child: Text(
                   'No resume yet',
@@ -33,7 +30,7 @@ class HomeView extends GetView<HomeController> {
                 ),
               )
             : Wrap(
-                children: resumeC.ResumesList.map((e) => Container(
+                children: controller.ResumesList.map((e) => Container(
                       width: Get.width * 0.3,
                       height: 100,
                       color: Colors.teal,
